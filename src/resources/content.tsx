@@ -278,14 +278,14 @@ const about: About = {
   },
 };
 
-// const blog: Blog = {
-//   path: "/blog",
-//   label: "Blog",
-//   title: "Writing about design and tech...",
-//   description: `Read what ${person.name} has been up to recently`,
-//   // Create new blog posts by adding a new .mdx file to app/blog/posts
-//   // All posts will be listed on the /blog route
-// };
+const blog: Blog = {
+  path: "/blog",
+  label: "Blog",
+  title: "Writing about design and tech...",
+  description: `Read what ${person.name} has been up to recently`,
+  // Create new blog posts by adding a new .mdx file to app/blog/posts
+  // All posts will be listed on the /blog route
+};
 
 const work: Work = {
   path: "/work",
@@ -347,4 +347,4 @@ const gallery: Gallery = {
   ],
 };
 
-export { person, social, home, about, newsletter, work, gallery };
+export { person, social, home, about, blog, newsletter, work, gallery };
