@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Ahmed",
   lastName: "Mohamed",
   name: `Ahmed Mohamed`,
-  role: "Backend Developer",
+  role: "Dot Net Developer",
   avatar: "/images/avatar.jpg",
   email: "ahmedmohamed.system69@gmail.com",
   location: "Africa/Cairo", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
@@ -97,54 +97,60 @@ const about: About = {
       </>
     ),
   },
-  work: {
-    display: false, // set to false to hide this section
-    title: "Work Experience",
+  studies: {
+    display: true, // set to false to hide this section
+    title: "Studies",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Bachelor's degree in Computer and Data Science",
+        timeframe: "2021 - 2025",
+        role: "University of Alexandria",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Completed with a GPA of 3.34.
           </>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
         ],
       },
       {
-        company: "Creativ3",
+        company: "Applied Data Science course",
         timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        role: "World Quant University",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
+            Completed with "A" Grade.
+          </>
+        ],
+        images: [],
+      },
+      {
+        company: "AI & ML Summer Program",
+        timeframe: "2021 - 2025",
+        role: "Sprints",
+        achievements: [
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Completed with "A" Grade.
           </>,
+        ],
+        images: [
+        ],
+      },
+      {
+        company: "Flutter Comprehensive Training program",
+        timeframe: "2018 - 2022",
+        role: "MyCommunication",
+        achievements: [
+          <>
+            Completed with "A" Grade.
+          </>
         ],
         images: [],
       },
     ],
   },
-  studies: {
-    display: true, // set to false to hide this section
+  studies_v2: {
+    display: false, // set to false to hide this section
     title: "Studies",
     institutions: [
       {
@@ -167,7 +173,7 @@ const about: About = {
       
     ],
   },
-  technical: {
+  skills: {
     display: true, // set to false to hide this section
     title: "Skills",
     skills: [
@@ -189,10 +195,6 @@ const about: About = {
           {
             name: "Dart",
             icon: "dart",
-          },
-          {
-            name: "Java",
-            icon: "Java",
           },
           {
             name: "HTML",
@@ -238,9 +240,37 @@ const about: About = {
             name: "Next.js",
             icon: "nextjs",
           },
+        ],
+      },
+    ],
+  },
+
+  technologies: {
+    display: true, // set to false to hide this section
+    title: "Technologies",
+    technologies: [
+      {
+        title: "",
+        tags: [
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: ".Net",
+            icon: "dotnet",
+          },
+          {
+            name: "Spring Boot",
+            icon: "springBoot",
+          },
+          {
+            name: "Fast API",
+            icon: "fastAPI",
+          },
+          {
+            name: "Flutter",
+            icon: "flutter",
+          },
+          {
+            name: "Next.js",
+            icon: "nextjs",
           },
         ],
       },
@@ -248,19 +278,19 @@ const about: About = {
   },
 };
 
-const blog: Blog = {
-  path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
-};
+// const blog: Blog = {
+//   path: "/blog",
+//   label: "Blog",
+//   title: "Writing about design and tech...",
+//   description: `Read what ${person.name} has been up to recently`,
+//   // Create new blog posts by adding a new .mdx file to app/blog/posts
+//   // All posts will be listed on the /blog route
+// };
 
 const work: Work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
+  label: "Projects",
+  title: `${person.name}'s Projects`,
   description: `Design and dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
@@ -317,4 +347,4 @@ const gallery: Gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, home, about, newsletter, work, gallery };

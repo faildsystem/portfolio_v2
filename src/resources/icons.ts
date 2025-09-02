@@ -39,6 +39,9 @@ import {
   SiDocker,
   SiGit,
   SiDotnet,
+  SiFlutter,
+  SiFastapi,
+  SiSpringboot
 } from "react-icons/si";
 
 import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads } from "react-icons/fa6";
@@ -80,7 +83,10 @@ export const iconLibrary: Record<string, IconType> = {
   r: SiR,
   dotnet: SiDotnet,
   docker: SiDocker,
-  git: SiGit
+  git: SiGit,
+  flutter: SiFlutter,
+  fastAPI: SiFastapi,
+  springBoot: SiSpringboot
 
 };
 

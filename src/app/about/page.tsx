@@ -35,19 +35,24 @@ export default function About() {
       items: [],
     },
     {
-      title: about.work.title,
-      display: about.work.display,
-      items: about.work.experiences.map((experience) => experience.company),
-    },
-    {
       title: about.studies.title,
       display: about.studies.display,
-      items: about.studies.institutions.map((institution) => institution.name),
+      items: about.studies.experiences.map((experience) => experience.company),
     },
     {
-      title: about.technical.title,
-      display: about.technical.display,
-      items: about.technical.skills.map((skill) => skill.title),
+      title: about.studies_v2.title,
+      display: about.studies_v2.display,
+      items: about.studies_v2.institutions.map((institution) => institution.name),
+    },
+    {
+      title: about.skills.title,
+      display: about.skills.display,
+      items: about.skills.skills.map((skill) => skill.title),
+    },
+    {
+      title: about.technologies.title,
+      display: about.technologies.display,
+      items: about.technologies.technologies.map((technology) => technology.title),
     },
   ];
   return (
@@ -196,13 +201,13 @@ export default function About() {
             </Column>
           )}
 
-          {about.work.display && (
+          {about.studies.display && (
             <>
-              <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
-                {about.work.title}
+              <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
+                {about.studies.title}
               </Heading>
               <Column fillWidth gap="l" marginBottom="40">
-                {about.work.experiences.map((experience, index) => (
+                {about.studies.experiences.map((experience, index) => (
                   <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
                     <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
                       <Text id={experience.company} variant="heading-strong-l">
@@ -255,13 +260,13 @@ export default function About() {
             </>
           )}
 
-          {about.studies.display && (
+          {about.studies_v2.display && (
             <>
-              <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
-                {about.studies.title}
+              <Heading as="h2" id={about.studies_v2.title} variant="display-strong-s" marginBottom="m">
+                {about.studies_v2.title}
               </Heading>
               <Column fillWidth gap="l" marginBottom="40">
-                {about.studies.institutions.map((institution, index) => (
+                {about.studies_v2.institutions.map((institution, index) => (
                   <Column key={`${institution.name}-${index}`} fillWidth gap="4">
                     <Text id={institution.name} variant="heading-strong-l">
                       {institution.name}
@@ -275,18 +280,18 @@ export default function About() {
             </>
           )}
 
-          {about.technical.display && (
+          {about.skills.display && (
             <>
               <Heading
                 as="h2"
-                id={about.technical.title}
+                id={about.skills.title}
                 variant="display-strong-s"
-                marginBottom="40"
+                marginBottom="20"
               >
-                {about.technical.title}
+                {about.skills.title}
               </Heading>
               <Column fillWidth gap="l">
-                {about.technical.skills.map((skill, index) => (
+                {about.skills.skills.map((skill, index) => (
                   <Column key={`${skill}-${index}`} fillWidth gap="4">
                     <Text id={skill.title} variant="heading-strong-l">
                       {skill.title}
@@ -306,6 +311,62 @@ export default function About() {
                     {skill.images && skill.images.length > 0 && (
                       <Row fillWidth paddingTop="m" gap="12" wrap>
                         {skill.images.map((image, index) => (
+                          <Row
+                            key={index}
+                            border="neutral-medium"
+                            radius="m"
+                            minWidth={image.width}
+                            height={image.height}
+                          >
+                            <Media
+                              enlarge
+                              radius="m"
+                              sizes={image.width.toString()}
+                              alt={image.alt}
+                              src={image.src}
+                            />
+                          </Row>
+                        ))}
+                      </Row>
+                    )}
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
+
+          {about.technologies.display && (
+            <>
+              <Heading
+                as="h2"
+                id={about.technologies.title}
+                variant="display-strong-s"
+                marginBottom="20"
+                marginTop="20"
+              >
+                {about.technologies.title}
+              </Heading>
+              <Column fillWidth gap="l">
+                {about.technologies.technologies.map((technology, index) => (
+                  <Column key={`${technology}-${index}`} fillWidth gap="4">
+                    <Text id={technology.title} variant="heading-strong-l">
+                      {technology.title}
+                    </Text>
+                    <Text variant="body-default-m" onBackground="neutral-weak">
+                      {technology.description}
+                    </Text>
+                    {technology.tags && technology.tags.length > 0 && (
+                      <Row wrap gap="8" paddingTop="8">
+                        {technology.tags.map((tag, tagIndex) => (
+                          <Tag key={`${technology.title}-${tagIndex}`} size="l" prefixIcon={tag.icon}>
+                            {tag.name}
+                          </Tag>
+                        ))}
+                      </Row>
+                    )}
+                    {technology.images && technology.images.length > 0 && (
+                      <Row fillWidth paddingTop="m" gap="12" wrap>
+                        {technology.images.map((image, index) => (
                           <Row
                             key={index}
                             border="neutral-medium"

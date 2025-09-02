@@ -135,7 +135,7 @@ export interface About extends BasePageConfig {
     description: React.ReactNode;
   };
   /** Work experience section */
-  work: {
+  studies: {
     /** Whether to display work experience */
     display: boolean;
     /** Title for the work experience section */
@@ -164,7 +164,7 @@ export interface About extends BasePageConfig {
     }>;
   };
   /** Studies/education section */
-  studies: {
+  studies_v2: {
     /** Whether to display studies section */
     display: boolean;
     /** Title for the studies section */
@@ -178,7 +178,7 @@ export interface About extends BasePageConfig {
     }>;
   };
   /** Technical skills section */
-  technical: {
+  skills: {
     /** Whether to display technical skills section */
     display: boolean;
     /** Title for the technical skills section */
@@ -207,6 +207,36 @@ export interface About extends BasePageConfig {
       }>;
     }>;
   };
+  technologies: {
+    /** Whether to display technologies section */
+    display: boolean;
+    /** Title for the technologies section */
+    title: string;
+    /** List of technologies */
+    technologies: Array<{
+      /** technology title */
+      title: string;
+      /** technology description */
+      description?: React.ReactNode;
+      /** technology tags */
+      tags?: Array<{
+        name: string;
+        icon?: string;
+      }>;
+      /** Images related to the technology */
+      images?: Array<{
+        /** Image source path */
+        src: string;
+        /** Image alt text */
+        alt: string;
+        /** Image width ratio */
+        width: number;
+        /** Image height ratio */
+        height: number;
+      }>;
+    }>;
+  }
+
 }
 
 /**
