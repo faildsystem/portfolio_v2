@@ -305,13 +305,8 @@ const gallery: Gallery = {
   // These are placeholder images, replace with your own
   images: [
     {
-<<<<<<< HEAD
       src: "/images/gallery/horizontal-3.mp4",
       alt: "video",
-=======
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
->>>>>>> b9d6e25d1355440a89e0c261d98531d27566b090
       orientation: "horizontal",
     },
     {
