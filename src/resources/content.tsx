@@ -9,7 +9,7 @@ const person: Person = {
   avatar: "/images/avatar.jpg",
   email: "ahmedmohamed.system69@gmail.com",
   location: "Africa/Cairo", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["Arabic", "English"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["Arabic", "English", "Italian"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -175,7 +175,7 @@ const about: About = {
   },
   skills: {
     display: true, // set to false to hide this section
-    title: "Skills",
+    title: "Skillsss",
     skills: [
       {
         title: "",
