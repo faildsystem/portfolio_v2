@@ -175,7 +175,7 @@ const about: About = {
   },
   skills: {
     display: true, // set to false to hide this section
-    title: "Skills",
+    title: "Skillsss",
     skills: [
       {
         title: "",
